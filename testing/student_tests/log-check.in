@@ -1,0 +1,19 @@
+# Tests the log with 2 commits and the initial commit.
+I definitions.inc
+> init
+<<<
++ mine.txt wug.txt
+> add mine.txt
+<<<
+> commit "added my own wug"
+<<<
+> log
+===
+${COMMIT_HEAD}
+added my own wug
+
+===
+${COMMIT_HEAD}
+initial commit
+
+<<<*
